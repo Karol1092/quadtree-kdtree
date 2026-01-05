@@ -1,0 +1,51 @@
+Algorithm,Data Size,Points functions,Time,Points
+Quadtree,1000,Random,0.0009996891021728516,246
+Brute-force,1000,Random,0.0,246
+Quadtree,5000,Random,0.007754802703857422,1290
+Brute-force,5000,Random,0.0011730194091796875,1290
+Quadtree,10000,Random,0.0157015323638916,2502
+Brute-force,10000,Random,0.0031690597534179688,2502
+Quadtree,50000,Random,0.07154488563537598,12472
+Brute-force,50000,Random,0.013587236404418945,12472
+Quadtree,100000,Random,0.16162729263305664,25187
+Brute-force,100000,Random,0.04052233695983887,25187
+Quadtree,1000,Collinear,0.007359504699707031,483
+Brute-force,1000,Collinear,0.005227565765380859,483
+Quadtree,5000,Collinear,0.035535573959350586,2467
+Brute-force,5000,Collinear,0.0020072460174560547,2467
+Quadtree,10000,Collinear,0.052778005599975586,4999
+Brute-force,10000,Collinear,0.003000020980834961,4999
+Quadtree,50000,Collinear,0.2638273239135742,25082
+Brute-force,50000,Collinear,0.023702144622802734,25082
+Quadtree,100000,Collinear,0.5711212158203125,49839
+Brute-force,100000,Collinear,0.0644826889038086,49839
+Quadtree,1000,Gesture-like,0.0020143985748291016,87
+Brute-force,1000,Gesture-like,0.008667230606079102,87
+Quadtree,5000,Gesture-like,0.0,0
+Brute-force,5000,Gesture-like,0.0010004043579101562,0
+Quadtree,10000,Gesture-like,0.0010004043579101562,0
+Brute-force,10000,Gesture-like,0.002440929412841797,0
+Quadtree,50000,Gesture-like,0.0,0
+Brute-force,50000,Gesture-like,0.009577512741088867,0
+Quadtree,100000,Gesture-like,0.27934718132019043,44338
+Brute-force,100000,Gesture-like,0.03330802917480469,44338
+Quadtree,1000,Rectangle edges,0.0010001659393310547,0
+Brute-force,1000,Rectangle edges,0.005396842956542969,0
+Quadtree,5000,Rectangle edges,0.0,0
+Brute-force,5000,Rectangle edges,0.0010175704956054688,0
+Quadtree,10000,Rectangle edges,0.0010025501251220703,0
+Brute-force,10000,Rectangle edges,0.004475831985473633,0
+Quadtree,50000,Rectangle edges,0.001004934310913086,0
+Brute-force,50000,Rectangle edges,0.013571500778198242,0
+Quadtree,100000,Rectangle edges,0.0,0
+Brute-force,100000,Rectangle edges,0.020492076873779297,0
+Quadtree,1000,One edge,0.0,0
+Brute-force,1000,One edge,0.0,0
+Quadtree,5000,One edge,0.0,0
+Brute-force,5000,One edge,0.0009999275207519531,0
+Quadtree,10000,One edge,0.0,0
+Brute-force,10000,One edge,0.002668142318725586,0
+Quadtree,50000,One edge,0.0,0
+Brute-force,50000,One edge,0.012244462966918945,0
+Quadtree,100000,One edge,0.0,0
+Brute-force,100000,One edge,0.021514177322387695,0
