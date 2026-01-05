@@ -46,7 +46,7 @@ class Boundary:
         self.left_up = lu
 
     @classmethod
-    def from_int(cls, x1: int, x2: int, y1: int, y2: int):
+    def from_values(cls, x1: float, x2: float, y1: float, y2: float):
         ld = Point(x1, y1)
         rd = Point(x2, y1)
         ru = Point(x2, y2)
@@ -59,7 +59,7 @@ class Boundary:
             and (self.left_down.y - eps) <= p.y <= (self.right_up.y + eps)
         )
 
-    def to_value_list(self) -> list[tuple[float, float]]:
+    def to_list(self) -> list[tuple[float, float]]:
         return [(self.left_down.x, self.left_down.y),
                 (self.right_down.x, self.right_down.y),
                 (self.right_up.x, self.right_up.y),
@@ -79,7 +79,7 @@ class Boundary:
         if not vis:
             vis = Visualizer()
 
-        vis.add_polygon(self.to_value_list(), facecolor=None, edgecolor=color, closed=True, linewidth=2, alpha=0.2)
+        vis.add_polygon(self.to_list(), facecolor=None ,edgecolor=color, closed=True, linewidth=2, alpha=0.2)
 
         return vis
 
