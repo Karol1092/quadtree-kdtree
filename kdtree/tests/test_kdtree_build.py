@@ -1,5 +1,4 @@
-import pytest
-from kdtree import Kdtree
+from kdtree_test import Kdtree
 
 def test_empty_build():
     kdtree = Kdtree([])

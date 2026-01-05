@@ -1,7 +1,6 @@
 import time
-import pytest
 import numpy as np
-from kdtree import Kdtree
+from kdtree_test import Kdtree
 
 def brute_force(points, query_range):
     x1, x2, y1, y2 = query_range
