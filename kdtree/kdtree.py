@@ -93,7 +93,7 @@ class Kdtree:
         
         self.root = self.build_kdtree(P)
     
-    def visualize(self, default_region) -> Visualizer:
+    def visualize(self, default_region = [0, 10, 0, 10]) -> Visualizer:
         vis = Visualizer()
         
         vis.add_point(self.points, color="blue")
