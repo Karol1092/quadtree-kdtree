@@ -1,4 +1,6 @@
-from main import Quadtree, Boundary, Point
+import time
+
+from quadtree import Quadtree, Boundary, Point
 import numpy as np
 import pandas as pd
 
@@ -168,6 +170,20 @@ def run_correctness_test():
     assert quadtree_set == brute_force_set, "Quadtree results do not match brute-force results"
     print("Correctness test passed!")
 
+def one_test():
+    boundary = Boundary(Point(0, 0), Point(100000, 0), Point(100000, 100000), Point(0, 100000))
+    query_boundary = Boundary(Point(25000, 25000), Point(75000, 25000), Point(75000, 75000), Point(25000, 75000))
+
+    points = generate_random_points(boundary, 10000000)
+
+    start_time = time.time()
+    quadtree = Quadtree(boundary, points)
+    points = quadtree.search(query_boundary)
+    elapsed_time = time.time() - start_time
+
+    print(f"Quadtree handled 10 million points in {elapsed_time:.2f} seconds, found {len(points)} points in query.")
+
 if __name__ == "__main__":
-    run_correctness_test()
-    run_speed_test()
+    one_test()
+    # run_correctness_test()
+    # run_speed_test()

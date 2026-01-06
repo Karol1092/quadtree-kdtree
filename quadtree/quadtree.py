@@ -59,7 +59,7 @@ class Boundary:
             and (self.left_down.y - eps) <= p.y <= (self.right_up.y + eps)
         )
 
-    def to_list(self) -> list[tuple[float, float]]:
+    def to_value_list(self) -> list[tuple[float, float]]:
         return [(self.left_down.x, self.left_down.y),
                 (self.right_down.x, self.right_down.y),
                 (self.right_up.x, self.right_up.y),
@@ -79,7 +79,7 @@ class Boundary:
         if not vis:
             vis = Visualizer()
 
-        vis.add_polygon(self.to_list(), facecolor=None ,edgecolor=color, closed=True, linewidth=2, alpha=0.2)
+        vis.add_polygon(self.to_value_list(), facecolor=None ,edgecolor=color, closed=True, linewidth=2, alpha=0.2)
 
         return vis
 
@@ -268,10 +268,6 @@ class QuadtreeVisualizer(Visualizer):
                 _visualize_subtree(subtree.left_up)
 
         _visualize_subtree(tree)
-
-    @staticmethod
-    def visualize_quadtree(tree: Quadtree) -> Visualizer:
-        return QuadtreeVisualizer(tree)
 
     def visualize_search(self, boundary: Boundary, color='red') -> Visualizer:
         boundary.visualize(self, color=color)

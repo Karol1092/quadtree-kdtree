@@ -1,5 +1,5 @@
 import pytest
-from main import Point, Boundary, Quadtree
+from quadtree import Point, Boundary, Quadtree
 
 @pytest.fixture()
 def eps() -> float:
